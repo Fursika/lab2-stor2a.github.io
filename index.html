@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz rejestracyjny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formularz rejestracyjny</h1>
+        <form action="/submit" method="post">
+            <label for="first-name">Imię:</label>
+            <input type="text" id="first-name" name="first_name" required>
+
+            <label for="last-name">Nazwisko:</label>
+            <input type="text" id="last-name" name="last_name" required>
+
+            <label for="street">Ulica:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="house-number">Numer domu:</label>
+            <input type="text" id="house-number" name="house_number" required>
+
+            <label for="apartment-number">Numer mieszkania:</label>
+            <input type="text" id="apartment-number" name="apartment_number">
+
+            <label for="city">Miasto:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="gender">Płeć:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
+                <option value="other">Inna</option>
+            </select>
+
+            <label for="driving-license">Czy posiadasz prawo jazdy?</label>
+            <input type="checkbox" id="driving-license" name="driving_license">
+
+            <label for="province">Województwo:</label>
+            <select id="province" name="province" required>
+                <option value="dolnoslaskie">Dolnośląskie</option>
+                <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                <option value="lubelskie">Lubelskie</option>
+            </select>
+
+            <label for="comments">Uwagi:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <label for="birth-date">Data urodzenia:</label>
+            <input type="date" id="birth-date" name="birth_date" required>
+
+            <label for="phone-number">Numer telefonu:</label>
+            <input type="tel" id="phone-number" name="phone_number" pattern="[0-9]{9}" required>
+            <small>Format: 123456789</small>
+
+            <input type="submit" value="Zapisz">
+        </form>
+    </div>
+</body>
+</html>
